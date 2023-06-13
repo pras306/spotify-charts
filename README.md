@@ -1,70 +1,203 @@
-# Getting Started with Create React App
+# Spotify Charts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Spotify Charts](src/assets/images/spotify_charts.png)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### Table of Contents
 
-### `npm start`
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [API References](#api-references)
+- [License](#license)
+- [Author Info](#author-info)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Description
 
-### `npm test`
+This is a web app that lists information about popular song tracks and artists including their biography, related song information obtained from Spotify 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Technologies
 
-### `npm run build`
+- React JS
+- Redux Toolkit
+- React Router
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Back To The Top](#spotify-charts)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How To Use
 
-### `npm run eject`
+The website is published at [Spotify Charts](https://spotify-charts.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the project 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  git clone https://github.com/pras306/spotify-charts.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Go to the project directory
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  cd spotify-charts
+```
 
-## Learn More
+Install dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Start the server
 
-### Code Splitting
+```bash
+  npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+[Back To The Top](#spotify-charts)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## API References
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Spotify API](https://rapidapi.com/airaudoeduardo/api/spotify81)
+- [Spotify Scraper API](https://rapidapi.com/DataFanatic/api/spotify-scraper)
+- [Spotify API](https://rapidapi.com/Glavier/api/spotify23)
+- Custom Proxy Server for hiding API key - [https://api-proxy-server-6xbe.onrender.com/api/v1](https://api-proxy-server-6xbe.onrender.com/api/v1)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### GET top Global tracks
 
-### Deployment
+```http
+  GET /spotify/top_200_tracks/${date}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Parameter     | Type     | Description                                                      |
+| :-----------  | :------- | :--------------------------------------------------------------- |
+| `date`        | `string` | **Required**. the last Thursday's date from current date         |
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Back To The Top](#spotify-charts)
+
+
+#### GET top tracks by Monthly Listeners
+
+```http
+  GET /spotify/top_20_by_monthly_listeners
+```
+
+
+[Back To The Top](#spotify-charts)
+
+
+#### GET top tracks by Followers
+
+```http
+  GET /spotify/top_20_by_followers
+```
+
+
+[Back To The Top](#spotify-charts)
+
+
+#### GET single track details
+
+```http
+  GET /spotify/tracks/${songId}
+```
+
+| Parameter     | Type     | Description                                                      |
+| :-----------  | :------- | :--------------------------------------------------------------- |
+| `songId`      | `string` | **Required**. Spotify ID of the required song                    |
+
+
+[Back To The Top](#spotify-charts)
+
+
+#### GET single track's lyrics details
+
+```http
+  GET /spotify/track_lyrics/${songId}
+```
+
+| Parameter     | Type     | Description                                                      |
+| :-----------  | :------- | :--------------------------------------------------------------- |
+| `songId`      | `string` | **Required**. Spotify ID of the required song                    |
+
+
+[Back To The Top](#spotify-charts)
+
+
+#### GET artist's overview details
+
+```http
+  GET /spotify/artist_overview/${artistId}
+```
+
+| Parameter     | Type     | Description                                                      |
+| :-----------  | :------- | :--------------------------------------------------------------- |
+| `artistId`    | `string` | **Required**. Spotify ID of the required artist                  |
+
+
+[Back To The Top](#spotify-charts)
+
+
+#### GET top tracks by rank
+
+```http
+  GET /spotify/chart/tracks/top
+```
+
+
+[Back To The Top](#spotify-charts)
+
+
+#### GET top artists by rank
+
+```http
+  GET /spotify/chart/artists/top
+```
+
+
+[Back To The Top](#spotify-charts)
+
+---
+
+## License
+
+MIT License
+
+Copyright (c) [2021] [Prasanna Sriram]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+[Back To The Top](#spotify-charts)
+
+---
+
+## Author Info
+
+- Github - [pras306](https://github.com/pras306)
+- LinkedIn - [Prasanna Sriram](https://www.linkedin.com/in/prasanna-sriram/)
+- Portfolio - [Personal Portfolio](https://prasanna-sriram.netlify.app/)
+
+[Back To The Top](#spotify-charts)
