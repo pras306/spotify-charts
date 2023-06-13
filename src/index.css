@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'YANONE BOLD';
+  src: url('./assets/fonts/YanoneKaffeesatz/YanoneKaffeesatz-Bold.ttf') format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'YANONE REGULAR';
+  src: url('./assets/fonts/YanoneKaffeesatz/YanoneKaffeesatz-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YANONE LIGHT';
+  src: url('./assets/fonts/YanoneKaffeesatz/YanoneKaffeesatz-Light.ttf') format('truetype');
+}
+
+:root {
+  --bgc-black: #161B21;
+  --bgc-blue: #00FFFF;
+  --bgc-blue-gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%);
+  --bgc-charcoal: #292826;
+  --bgc-eggplant: #2B3252;
+  --bgc-orange: #F4A950;
+  --bgc-white: #F7F7F9;
+  --bgc-yellow: #FAD744;
+  --ff-yanone-bold: 'YANONE BOLD';
+  --ff-yanone-light: 'YANONE LIGHT';
+  --ff-yanone-regular: 'YANONE REGULAR';
+}
+
+body {
+  margin: 0;
+  padding: 0   
 }

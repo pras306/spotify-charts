@@ -1,0 +1,27 @@
+.mp__discover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.mp__discover h2 {
+    text-align: center;
+    font-family: var(--ff-yanone-bold);
+    font-size: 3em;
+}
+
+.mp__discover-songs {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap: 2rem;
+    grid-column: 1 / 3;
+    margin: 5rem 1.5rem;
+}
+
+.mp__discover::-webkit-scrollbar {
+    visibility: hidden;
+}

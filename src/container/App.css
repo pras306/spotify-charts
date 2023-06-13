@@ -1,0 +1,15 @@
+.mp {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mp__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: var(--bgc-blue-gradient);
+  color: var(--bgc-white);
+  height: 100%;
+}

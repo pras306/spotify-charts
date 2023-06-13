@@ -1,0 +1,78 @@
+.mp__artist {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.mp__artist-image {
+    width: 100%;
+    height: 40vh;
+}
+
+.mp__artist-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mp__artist-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mp__artist-header h1 {    
+    font-family: var(--ff-yanone-bold);
+    font-size: 3em;
+}
+
+.mp__artist-header svg {
+    color: var(--bgc-blue);
+    font-size: 1.5em;
+}
+
+.mp__artist-bio {
+    font-family: var(--ff-yanone-light);
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.mp__artist-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.mp__artist-links svg {
+    color: var(--bgc-blue);
+    font-size: 1.5em;
+}
+
+.mp__artist-links a {
+    text-decoration: none;
+    color: var(--bgc-blue);
+}
+
+.mp__artist-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: 1fr;
+    place-items: center;
+    width: 100%;
+    margin: 1.2rem 0;
+    gap: 2rem;
+}
+
+.mp__artist-stats span {
+    font-family: var(--ff-yanone-regular);
+    font-size: 1.5em;
+}
+
+.mp__artist::-webkit-scrollbar {
+    visibility: hidden;
+}

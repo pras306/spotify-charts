@@ -1,0 +1,55 @@
+.mp__rankList {
+    display: flex;
+    flex-direction: column;
+}
+
+.mp__rankList-header {
+    text-align: center;
+}
+
+.mp__rankList-header h2 {
+    font-family: var(--ff-yanone-bold);
+    font-size: 3em;
+}
+
+.mp__rankList-header p {
+    font-family: var(--ff-yanone-light);
+    font-size: 1.2em;
+}
+
+.mp__rankList-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+
+.mp__rankList-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.mp__rankList-item span {
+    font-family: var(--ff-yanone-regular);
+    font-size: 1.3em;
+}
+
+.mp__rankList-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.mp__rankList-item a {
+    font-family: var(--ff-yanone-regular);
+    font-size: 2em;
+    flex: 1;
+    text-decoration: none;
+    color: var(--bgc-white);
+}
+
+.mp__rankList-item span > svg {
+    font-size: 1.1rem;
+}

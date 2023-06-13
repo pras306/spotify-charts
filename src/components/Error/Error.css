@@ -1,0 +1,13 @@
+.mp__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mp__error h1 {
+    font-weight: bolder;
+    font-size: 2em;
+    font-family: var(--ff-yanone-light);
+    letter-spacing: 0.1em;
+}

@@ -1,0 +1,11 @@
+.mp__topArtists {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.mp__topArtists::-webkit-scrollbar {
+    visibility: hidden;
+}

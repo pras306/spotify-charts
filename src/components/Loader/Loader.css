@@ -1,0 +1,20 @@
+.mp__loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgc-black);
+    height: 100%;
+}
+
+.mp__loader img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.mp__loader h1 {
+    font-weight: bold;
+    font-size: 2em;
+    font-family: var(--ff-yanone-bold);
+    letter-spacing: 0.2em;
+}

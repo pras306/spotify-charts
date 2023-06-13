@@ -1,0 +1,62 @@
+.mp__songcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
+    background: var(--bgc-orange);
+    color: var(--bgc-black);
+    border-radius: 20px;    
+}
+
+.mp__songcard > a {
+    font-family: var(--ff-yanone-light);
+    margin: 1.5rem 0;
+    text-decoration: none;
+    color: var(--bgc-black);
+    font-size: 1.25em;
+    font-weight: bolder;
+}
+
+.mp__songcard span {
+    font-family: var(--ff-yanone-regular);
+}
+
+.mp__songcard span > a {
+    text-decoration: none;
+    color: var(--bgc-black);
+}
+
+.mp__songcard-player {
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.mp__songcard-player img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.mp__songcard-player svg {
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    font-size: 2em;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+}
+
+.mp__songcard-player:hover {
+    transform: scale(0.9);
+    background: var(--bgc-black);
+    color: var(--bgc-orange);
+}
+
+.mp__songcard-player:hover img {
+    opacity: 10%;
+}
+
+.mp__songcard-player:hover svg {
+    visibility: visible;
+    transform: scale(1.1);
+}
