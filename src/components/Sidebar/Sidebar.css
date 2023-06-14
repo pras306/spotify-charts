@@ -43,10 +43,6 @@
     font-size: 1.5em;
 }
 
-.mp__sidebar-mobile > .mp__sidebar-links > .mp__sidebar-link {
-    justify-content: center;
-}
-
 .mp__sidebar-link svg {
     width: 20px;
     height: 20px;
@@ -57,7 +53,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
     margin: 0 1.5rem;
     color: var(--bgc-white);
     cursor: pointer;
@@ -69,6 +64,15 @@
     margin: 1.5rem;
     font-size: 2em;
     z-index: 100;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.mp__sidebar-mobile > .mp__sidebar-links > .mp__sidebar-link {
+    justify-content: center;
+    margin-top: 5rem;
 }
 
 .slider {

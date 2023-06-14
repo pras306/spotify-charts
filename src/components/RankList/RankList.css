@@ -53,3 +53,37 @@
 .mp__rankList-item span > svg {
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 900px) {
+    .mp__rankList-item img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mp__rankList-header h2 {
+        font-size: 2em;
+    }
+    
+    .mp__rankList-header p {
+        font-family: var(--ff-yanone-light);
+        font-size: 1em;
+    }
+
+    .mp__rankList-item img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .mp__rankList-item a {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .mp__rankList-item img {
+        width: 50px;
+        height: 50px;
+    }
+}

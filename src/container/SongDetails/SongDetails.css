@@ -87,3 +87,28 @@
 .mp__songDetails::-webkit-scrollbar {
     visibility: hidden;
 }
+
+
+@media screen and (max-width: 900px) {
+    .mp__songDetails-lyrics h2 {
+        font-size: 2em;
+    }
+    
+    .mp__songDetails-lyrics span {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mp__songDetails-title {
+        flex-direction: column;
+    }
+
+    .mp__songDetails-header h4 {
+        text-align: center;
+    }
+
+    .mp__songDetails-lyrics {
+        text-align: center;
+    }
+}

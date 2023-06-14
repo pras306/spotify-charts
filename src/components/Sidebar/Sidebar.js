@@ -20,7 +20,7 @@ const Sidebar = () => {
     handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
-  })
+  });
 
   useEffect(() => {
     if(screenSize < 900) {
@@ -36,6 +36,7 @@ const Sidebar = () => {
         key={idx}
         className='mp__sidebar-link'
         to={link.to}
+        onClick={() => setActiveMenu(false)}
       >
         {<link.icon />}
         {link.name}
@@ -46,7 +47,7 @@ const Sidebar = () => {
   return (
     <>
       {mobileMenu ?
-        <div className="mp__sidebar-mobile">
+        <div className={`mp__sidebar-mobile ${activeMenu ? 'h-full' : ''}`}>
           {!activeMenu ?
             <HiOutlineMenu onClick={() => setActiveMenu(!activeMenu)} />
           :

@@ -76,3 +76,15 @@
 .mp__artist::-webkit-scrollbar {
     visibility: hidden;
 }
+
+@media screen and (max-width: 900px) {
+    .mp__artist-header h1 {    
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mp__artist-bio {
+        text-align: center;
+    }
+}
