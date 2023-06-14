@@ -1,7 +1,7 @@
 import { HiOutlineHome, HiOutlinePhotograph, HiOutlineUserGroup, HiOutlineHashtag } from 'react-icons/hi';
 
 
-export const SPOTIFY_BASE_URL = process.env.NODE_ENV === 'production' ? "https://api-proxy-server.up.railway.app/api/v1/spotify" : "http://localhost:5000/api/v1/spotify";
+export const SPOTIFY_BASE_URL = process.env.NODE_ENV === 'production' ? "https://api-proxy-server-6xbe.onrender.com/api/v1/spotify" : "http://localhost:5000/api/v1/spotify";
 
 export const MONTHS = {
     1: 'January',
